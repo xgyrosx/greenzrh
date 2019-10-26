@@ -1,27 +1,28 @@
-import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
-import { ExpoLinksView } from "@expo/samples";
+import React from 'react';
+import { View, ScrollView, SafeAreaView } from 'react-native';
+import Challenges from '../components/Challenges';
+import { AppTitle } from '../components/StyledText';
 
-export default function ChallengeScreen() {
+export default function ChallengeScreen(props) {
   return (
-    <ScrollView style={styles.container}>
-      {/**
-       * Go ahead and delete ExpoLinksView and replace it with your content;
-       * we just wanted to provide you with some helpful links.
-       */}
-      <ExpoLinksView />
-    </ScrollView>
+    <View style={{
+      flex: 1,
+      backgroundColor: '#fff',
+    }}>
+      <ScrollView
+        contentContainerStyle={{
+          padding: 10,
+        }}>
+
+        <SafeAreaView>
+          <AppTitle>Challenges</AppTitle>
+          <Challenges/>
+        </SafeAreaView>
+      </ScrollView>
+    </View>
   );
 }
 
 ChallengeScreen.navigationOptions = {
-  title: "Challenges"
+  header: null,
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 15,
-    backgroundColor: "#fff"
-  }
-});
