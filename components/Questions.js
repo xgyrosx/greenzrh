@@ -5,9 +5,9 @@ import Question from './Question';
 import * as math from 'mathjs/dist/math';
 
 export default function Questions(props) {
-  const [meatConsumption, setMeatConsumption] = useState(0);
-  const [coffeeConsumption, setCoffeeConsumption] = useState(0);
-  const [showerLength, setShowerLength] = useState(0);
+  const [meatConsumption, setMeatConsumption] = useState(150);
+  const [coffeeConsumption, setCoffeeConsumption] = useState(3);
+  const [showerLength, setShowerLength] = useState(10);
 
   return (
     <View>

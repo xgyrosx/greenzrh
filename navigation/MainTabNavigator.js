@@ -6,6 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import ChallengeScreen from '../screens/ChallengeScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -37,7 +38,7 @@ HomeStack.path = '';
 
 const LinksStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Links: ChallengeScreen,
   },
   config
 );
