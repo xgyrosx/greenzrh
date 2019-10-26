@@ -8,6 +8,7 @@ import {
   Text,
   Image
 } from "react-native";
+import Card from '../components/Card';
 
 export default function EnvironmentScreen() {
   return (
@@ -68,22 +69,7 @@ export function Environment(props) {
         paddingBottom: 10
       }}
     >
-      <View
-        style={{
-          backgroundColor: "#fff",
-          borderRadius: 8,
-          shadowColor: "#000",
-          shadowOffset: {
-            width: 0,
-            height: 0
-          },
-          shadowOpacity: 0.1,
-          shadowRadius: 6,
-          elevation: 2,
-          flex: 1,
-          flexDirection: "column"
-        }}
-      >
+      <Card>
         <View
           style={{
             flex: 1,
@@ -97,15 +83,15 @@ export function Environment(props) {
               overflow: "hidden"
             }}
           >
-            <Image style={{ height: 100, width: 150 }} source={props.image} />
+            <Image style={{ height: 100, width: 120 }} source={props.image} />
           </View>
-          <View style={{ padding: 5 }}>
+          <View style={{ padding: 10 }}>
             <AppTitle>{props.title}</AppTitle>
             <AppText>{props.text}</AppText>
             <AppDesc>{props.desc}</AppDesc>
           </View>
         </View>
-      </View>
+      </Card>
     </View>
   );
 }

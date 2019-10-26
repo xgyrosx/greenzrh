@@ -11,6 +11,7 @@ import ChallengeScreen from "../screens/ChallengeScreen";
 import EventScreen from "../screens/EventScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import EnvironmentScreen from "../screens/EnvironmentScreen";
+import Colors from "../constants/Colors";
 
 const config = Platform.select({
   web: { headerMode: "screen" },
@@ -32,7 +33,11 @@ HomeStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === "ios" ? "home" : "home"}
     />
-  )
+  ),
+  tabBarOptions: {
+    activeTintColor: Colors.tabIconSelected,
+    inactiveTintColor: Colors.tabIconDefault,
+  }
 };
 
 HomeStack.path = "";
@@ -52,7 +57,11 @@ ChallengeStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === "ios" ? "dumbbell" : "dumbbell"}
     />
-  )
+  ),
+  tabBarOptions: {
+    activeTintColor: Colors.tabIconSelected,
+    inactiveTintColor: Colors.tabIconDefault,
+  }
 };
 
 ChallengeStack.path = "";
@@ -72,7 +81,11 @@ EventStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === "ios" ? "event" : "event"}
     />
-  )
+  ),
+  tabBarOptions: {
+    activeTintColor: Colors.tabIconSelected,
+    inactiveTintColor: Colors.tabIconDefault,
+  }
 };
 
 EventStack.path = "";
@@ -92,7 +105,11 @@ EnvironmentStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === "ios" ? "location-on" : "location-on"}
     />
-  )
+  ),
+  tabBarOptions: {
+    activeTintColor: Colors.tabIconSelected,
+    inactiveTintColor: Colors.tabIconDefault,
+  }
 };
 
 EnvironmentStack.path = "";
@@ -112,7 +129,11 @@ ProfileStack.navigationOptions = {
       focused={focused}
       name={Platform.OS === "ios" ? "tag-faces" : "tag-faces"}
     />
-  )
+  ),
+  tabBarOptions: {
+    activeTintColor: Colors.tabIconSelected,
+    inactiveTintColor: Colors.tabIconDefault,
+  }
 };
 
 ProfileStack.path = "";

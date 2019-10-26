@@ -13,9 +13,7 @@ export default function ChallengeScreen(props) {
         contentContainerStyle={{
           padding: 10,
         }}>
-
         <SafeAreaView>
-          <AppTitle>Challenges</AppTitle>
           <Challenges/>
         </SafeAreaView>
       </ScrollView>
