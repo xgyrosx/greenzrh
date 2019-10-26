@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ScrollView, SafeAreaView } from 'react-native';
-import Events from '../components/Events';
+// import Events from '../components/Events';
 import { AppTitle } from '../components/StyledText';
 
 export default function EventScreen(props) {
@@ -16,13 +16,12 @@ export default function EventScreen(props) {
 
         <SafeAreaView>
           <AppTitle>Events</AppTitle>
-          <Events/>
+          {/* <Events/> */}
         </SafeAreaView>
       </ScrollView>
     </View>
   );
 }
-
 
 EventScreen.navigationOptions = {
   header: null,

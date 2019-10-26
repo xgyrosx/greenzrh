@@ -23,7 +23,6 @@ export default function ChallengeScreen(props) {
   );
 }
 
-
 ChallengeScreen.navigationOptions = {
   header: null,
 };
