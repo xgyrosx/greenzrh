@@ -140,8 +140,8 @@ ProfileStack.path = "";
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
-  EnvironmentStack,
   ChallengeStack,
+  EnvironmentStack,
   EventStack,
   ProfileStack
 });
