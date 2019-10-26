@@ -1,78 +1,130 @@
-import React from 'react';
-import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import React from "react";
+import { Platform } from "react-native";
+import {
+  createStackNavigator,
+  createBottomTabNavigator
+} from "react-navigation";
 
-import TabBarIcon from '../components/TabBarIcon';
-import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import TabBarIcon from "../components/TabBarIcon";
+import HomeScreen from "../screens/HomeScreen";
+import ChallengeScreen from "../screens/ChallengeScreen";
+import EventScreen from "../screens/EventScreen";
+import ProfileScreen from "../screens/ProfileScreen";
+import EnvironmentScreen from "../screens/EnvironmentScreen";
 
 const config = Platform.select({
-  web: { headerMode: 'screen' },
-  default: {},
+  web: { headerMode: "screen" },
+  default: {}
 });
 
 const HomeStack = createStackNavigator(
   {
-    Home: HomeScreen,
+    Home: HomeScreen
   },
   config
 );
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: "Home",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
+      library="MaterialCommunityIcons"
       focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
+      name={Platform.OS === "ios" ? "home" : "home"}
     />
-  ),
+  )
 };
 
-HomeStack.path = '';
+HomeStack.path = "";
 
-const LinksStack = createStackNavigator(
+const ChallengeStack = createStackNavigator(
   {
-    Links: LinksScreen,
+    Challenges: ChallengeScreen
   },
   config
 );
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+ChallengeStack.navigationOptions = {
+  tabBarLabel: "Challenges",
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
-  ),
+    <TabBarIcon
+      library="MaterialCommunityIcons"
+      focused={focused}
+      name={Platform.OS === "ios" ? "dumbbell" : "dumbbell"}
+    />
+  )
 };
 
-LinksStack.path = '';
+ChallengeStack.path = "";
 
-const SettingsStack = createStackNavigator(
+const EventStack = createStackNavigator(
   {
-    Settings: SettingsScreen,
+    Events: EventScreen
   },
   config
 );
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+EventStack.navigationOptions = {
+  tabBarLabel: "Events",
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
+    <TabBarIcon
+      library="MaterialIcons"
+      focused={focused}
+      name={Platform.OS === "ios" ? "event" : "event"}
+    />
+  )
 };
 
-SettingsStack.path = '';
+EventStack.path = "";
+
+const EnvironmentStack = createStackNavigator(
+  {
+    Environment: EnvironmentScreen
+  },
+  config
+);
+
+EnvironmentStack.navigationOptions = {
+  tabBarLabel: "Environment",
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      library="MaterialIcons"
+      focused={focused}
+      name={Platform.OS === "ios" ? "location-on" : "location-on"}
+    />
+  )
+};
+
+EnvironmentStack.path = "";
+
+const ProfileStack = createStackNavigator(
+  {
+    Profile: ProfileScreen
+  },
+  config
+);
+
+ProfileStack.navigationOptions = {
+  tabBarLabel: "My Profile",
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      library="MaterialIcons"
+      focused={focused}
+      name={Platform.OS === "ios" ? "tag-faces" : "tag-faces"}
+    />
+  )
+};
+
+ProfileStack.path = "";
 
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
-  LinksStack,
-  SettingsStack,
+  EnvironmentStack,
+  ChallengeStack,
+  EventStack,
+  ProfileStack
 });
 
-tabNavigator.path = '';
+tabNavigator.path = "";
 
 export default tabNavigator;
