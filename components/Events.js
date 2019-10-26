@@ -18,7 +18,7 @@ function Event(props) {
           <Image
             style={{
               flex: 1,
-              height: 50,
+              height: 5,
               width: "100%",
               resizeMode: "cover"
             }}
@@ -57,6 +57,31 @@ export default function Events(props) {
         </Event>
         <Event>
           <AppTitle>Donnerstag, 31. Oktober</AppTitle>
+          <AppText>Workshop on sustainable cooking</AppText>
+          <AppText>Location: Impact Hub, Viadukt</AppText>
+        </Event>
+        <Event>
+          <AppTitle>Samstag, 02. November</AppTitle>
+          <AppText>Circular Economy Meetup</AppText>
+          <AppText>Location: Impact Hub, Viadukt</AppText>
+        </Event>
+        <Event>
+          <AppTitle>Donnerstag, 07. November</AppTitle>
+          <AppText>Pantalk: Sustainable Investment</AppText>
+          <AppText>Location: Auer Salon</AppText>
+        </Event>
+        <Event>
+          <AppTitle>Freitag, 08. November</AppTitle>
+          <AppText>Velo-Friitig</AppText>
+          <AppText>Location: Sihlquai 125, 8004 Zürich</AppText>
+        </Event>
+        <Event>
+          <AppTitle>Samstag, 09. November</AppTitle>
+          <AppText>Workshop on sustainable cooking</AppText>
+          <AppText>Location: Impact Hub, Viadukt</AppText>
+        </Event>
+        <Event>
+          <AppTitle>Monat, 11. November</AppTitle>
           <AppText>Workshop on sustainable cooking</AppText>
           <AppText>Location: Impact Hub, Viadukt</AppText>
         </Event>
